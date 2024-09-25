@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membresías - BlackFit Gym</title>
+    <link rel="stylesheet" href="../navegation/barranavega.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../pages/assets/styles/box.css">
+</head>
+<body>
+
+    <!-- Encabezado con logo y barra de navegación -->
+    <header>
+        <div>
+            <div class="logo">
+                <img src="../assets/images/blackfitt.png" alt="BlackFit Logo" width="50" height="50">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="membreship.html">Membresías</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal de membresías -->
+    <main>
+        <section>
+            <h1>Membresías</h1>
+            <p>Elige la membresía que mejor se adapte a tu estilo de vida.</p>
+
+            <!-- Presentación de las membresías en forma de cuadros -->
+            <table border="1" cellspacing="0" cellpadding="10" align="center">
+                <tr>
+                    <td width="300">
+                        <a href="../compra/comprar_diario.html" class="membership-link" onclick="confirmMembership('Pase Diario')">
+                            <h2>Pase Diario</h2>
+                            <p>Precio: $2500</p>
+                            <p>Descuento en efectivo: <strong>$2300</strong></p>
+                            <p>Comprar Pase Diario</p>
+                        </a>
+                    </td>
+                    <td width="300">
+                        <a href="../compra/compra_3veces.html" class="membership-link" onclick="confirmMembership('3 Veces a la Semana')">
+                            <h2>3 Veces a la Semana</h2>
+                            <p>Precio: $23.000</p>
+                            <p>Descuento en efectivo: <strong>$21.000</strong></p>
+                            <p>Comprar 3 Veces a la Semana</p>
+                        </a>
+                    </td>
+                    <td width="300">
+                        <a href="../compra/comprar_todoslosdias.html" class="membership-link" onclick="confirmMembership('Todos los Días')">
+                            <h2>Todos los Días</h2>
+                            <p>Precio: $25.000</p>
+                            <p>Descuento en efectivo: <strong>$23.000</strong></p>
+                            <p>Comprar Todos los Días</p>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+        </section>
+    </main>
+    
+    <!-- Horarios -->
+    <p>Nuestros horarios de atención son de lunes a viernes de 6:00 AM a 10:00 PM y los sábados de 9:00 AM a 5:00 PM. Los domingos estamos cerrados.</p>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 BlackFit. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script de JavaScript -->
+    <script>
+        function confirmMembership(membershipType) {
+            alert('Has seleccionado la membresía: ' + membershipType);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* Estilos para la sección de servicios */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.service-box {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.service-box h2 {
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    margin-bottom: 20px;
+}
+
+.service-box a {
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service-box a:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c, #008080, #00b4d8);
+    color: #000;
+}
+body, html {
+    height: 100%; /* Asegura que el cuerpo y html ocupen el 100% de la altura de la ventana */
+    margin: 0;    /* Elimina márgenes predeterminados */
+}
+
+main {
+    display: flex;               /* Utiliza Flexbox para el diseño */
+    justify-content: center;     /* Centra horizontalmente */
+    align-items: center;         /* Centra verticalmente */
+    flex-direction: column;      /* Asegura que los elementos se apilen en columna */
+    height: 100vh;               /* Utiliza toda la altura de la ventana */
+}
+
+.services-container {
+    display: flex;               /* Utiliza Flexbox para el diseño interno */
+    justify-content: center;     /* Centra horizontalmente */
+    align-items: flex-start;     /* Alinea los elementos al inicio (puedes usar center si prefieres) */
+    flex-wrap: wrap;            /* Permite que los elementos se envuelvan si no caben en una línea */
+    margin: 20px 0;             /* Agrega margen superior e inferior (ajusta el valor según sea necesario) */
+    max-width: 1200px;          /* Ancho máximo del contenedor */
+}
+

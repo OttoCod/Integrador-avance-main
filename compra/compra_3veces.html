@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra 3 Veces a la Semana - BlackFit Gym</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../compra/form.css">
+    <link rel="stylesheet" href="../navegation/barranavega.css">
+
+    
+</head>
+<body>
+
+    <!-- Encabezado con logo y barra de navegación -->
+    <header>
+        <div>
+            <img src="../assets/images/blackfitt.png" alt="BlackFit Logo" width="50" height="50">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/about.html">Sobre Nosotros</a></li>
+                <li><a href="../pages/membreship.html">Membresías</a></li>
+                <li><a href="../pages/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal de compra -->
+    <main>
+        <section>
+            <h1>Compra 3 Veces a la Semana</h1>
+            <p>Completa el formulario para adquirir tu membresía de 3 Veces a la Semana.</p>
+
+            <form id="purchaseForm" action="#" method="post">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="pago">Medio de Pago:</label>
+                    <select id="pago" name="pago" required>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta de Crédito</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                    </select>
+                </div>
+                <input type="hidden" name="producto" value="3 Veces a la Semana">
+                <button type="submit">Comprar</button>
+            </form>
+
+            <div id="loading">
+                <img src="../assets/images/loading.gif" alt="Cargando...">
+            </div>
+
+            <div id="formMessage"></div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 BlackFit. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para validación y simulación del envío -->
+    <script>
+        document.getElementById("purchaseForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evitar el envío tradicional
+
+            var nombre = document.getElementById("nombre").value;
+            var direccion = document.getElementById("direccion").value;
+            var telefono = document.getElementById("telefono").value;
+            var email = document.getElementById("email").value;
+            var pago = document.getElementById("pago").value;
+            var formMessage = document.getElementById("formMessage");
+            var loading = document.getElementById("loading");
+
+            // Validación simple
+            if (nombre === "" || direccion === "" || telefono === "" || email === "" || pago === "") {
+                formMessage.style.display = "block";
+                formMessage.style.color = "red";
+                formMessage.innerHTML = "Por favor, completa todos los campos requeridos.";
+                return;
+            }
+
+            // Validación del formato de correo
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                formMessage.style.display = "block";
+                formMessage.style.color = "red";
+                formMessage.innerHTML = "Por favor, ingresa un correo electrónico válido.";
+                return;
+            }
+
+            // Mostrar spinner de carga
+            loading.style.display = "block";
+
+            // Simular envío con Fetch API
+            setTimeout(function() {
+                // Simulación de éxito o error
+                loading.style.display = "none";
+                formMessage.style.display = "block";
+                formMessage.style.color = "green";
+                formMessage.innerHTML = "¡Compra realizada con éxito!";
+                
+                // Limpiar formulario
+                document.getElementById("purchaseForm").reset();
+            }, 2000);  // Simula el tiempo de respuesta de 2 segundos
+        });
+    </script>
+</body>
+</html>

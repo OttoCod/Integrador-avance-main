@@ -1,0 +1,171 @@
+/* Estilos básicos del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y la navegación */
+    align-items: center;
+}
+
+header .logo {
+    margin-left: 20px; /* Espacio a la izquierda para el logo */
+}
+
+header nav {
+    margin-right: 20px; /* Espacio a la derecha para la navegación */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinear la barra de navegación a la derecha */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s; /* Añadir transición para suavizar el cambio de color */
+}
+
+header nav ul li a:hover {
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Estilo de las secciones */
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.trainers, .testimonials, .mission-values, .join-us {
+    margin-bottom: 40px;
+}
+
+/* Estilo de los entrenadores */
+.trainers img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.trainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los testimonios */
+.testimonials blockquote {
+    font-style: italic;
+    border-left: 4px solid #000;
+    padding-left: 20px;
+    margin: 0;
+}
+
+/* Estilo de la sección "Únete a Nosotros" */
+.join-us a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.join-us a:hover {
+    background-color: #555;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilo del logo */
+.logo img {
+    width: 80px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+/* Estilos para el encabezado */
+header {
+    background: #000; /* Fondo negro para el encabezado */
+    padding: 10px 0;
+    color: #fff;
+}
+
+/* Alineación del logo a la izquierda y la navegación a la derecha */
+header div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #fff; /* Color de la línea de subrayado */
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}

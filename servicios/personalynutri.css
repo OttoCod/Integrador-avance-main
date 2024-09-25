@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.service-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.service-info h1 {
+    font-size: 2em;
+}
+
+.service-info p {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
